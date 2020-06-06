@@ -11,11 +11,11 @@ docker run --rm -t -d \
 --name ${name}-dev \
 ${name}-dev
 
-docker exec -td ${name}-dev rm htdocs && ln -sf src/ htdocs
+docker exec -ti ${name}-dev rm htdocs && ln -sf src/ htdocs
 
-# HTTP Server in Container starten
-# docker exec -td ${name}-dev npm install && http-server /usr/src/app/src
-# echo "Starting up http-server, serving /usr/src/app/src
-# Available on:
-#  http://127.0.0.1:${port}"
+echo ""
+echo "// ----------------------------------------------------------------------"
+echo "HTTP Server available on: http://127.0.0.1:${port}"
+echo "Live Reload available on port http://127.0.0.1:35729"
+echo ""
 
