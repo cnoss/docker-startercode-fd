@@ -59,7 +59,6 @@ typings/
 
 # configs
 dist/configs
-Dockerconfig.cfg
 
 # Misc Ignores
 .DS_Store
