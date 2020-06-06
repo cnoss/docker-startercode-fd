@@ -1,0 +1,215 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: Merri;
+  font-style: normal;
+  font-weight: 300;
+  src: url(../assets/fonts/Merriweather/Merriweather-Light.ttf); }
+
+@font-face {
+  font-family: Merri;
+  font-style: normal;
+  font-weight: 400;
+  src: url(../assets/fonts/Merriweather/Merriweather-Regular.ttf); }
+
+@font-face {
+  font-family: Merri;
+  font-style: normal;
+  font-weight: 600;
+  src: url(../assets/fonts/Merriweather/Merriweather-Bold.ttf); }
+
+@font-face {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 300;
+  src: url(../assets/fonts/Raleway/Raleway-Light.ttf); }
+
+@font-face {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 500;
+  src: url(../assets/fonts/Raleway/Raleway-Medium.ttf); }
+
+@font-face {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 600;
+  src: url(../assets/fonts/Raleway/Raleway-Bold.ttf); }
+
+@font-face {
+  font-family: PTsans;
+  font-style: normal;
+  font-weight: 300;
+  src: url(../assets/fonts/PT_Sans/PTSans-Regular.ttf); }
+
+@font-face {
+  font-family: PTsans;
+  font-style: normal;
+  font-weight: 600;
+  src: url(../assets/fonts/PT_Sans/PTSans-Bold.ttf); }
+
+@font-face {
+  font-family: PTserif;
+  font-style: normal;
+  font-weight: 300;
+  src: url(../assets/fonts/PT_Serif/PTSerif-Regular.ttf); }
+
+@font-face {
+  font-family: PTserif;
+  font-style: normal;
+  font-weight: 600;
+  src: url(../assets/fonts/PT_Serif/PTSerif-Bold.ttf); }
+
+/* Sizes
+Using Lucas Numbers 1, 3, 4, 7, 11, 18, 29, 47, 76, 
+---------------------------------------------------------------------------- */
+/* Font Properties
+---------------------------------------------------------------------------- */
+/* Font Weights
+---------------------------------------------------------------------------- */
+/* Line Heights
+---------------------------------------------------------------------------- */
+/* Colors
+---------------------------------------------------------------------------- */
+/* Functional Properties
+---------------------------------------------------------------------------- */
+/* Viewports
+---------------------------------------------------------------------------- */
+/* Transitions
+---------------------------------------------------------------------------- */
+/* Misc
+---------------------------------------------------------------------------- */
+* {
+  box-sizing: border-box; }
+
+html, body {
+  font-family: PTsans;
+  font-size: 18px;
+  line-height: 130%;
+  font-weight: 400;
+  hyphens: auto;
+  color: #666; }
+
+img {
+  width: 100%;
+  height: auto; }
+
+h1, h2, h3, h4, p, blockquote {
+  margin-bottom: 29px; }
+
+blockquote {
+  font-family: PTserif;
+  color: #000; }
+
+blockquote:before {
+  content: "«";
+  padding-right: 0.1em; }
+
+blockquote:after {
+  content: "»";
+  padding-left: 0.1em; }
+
+h1, h2, h3, h4 {
+  line-height: 100%;
+  font-weight: 600;
+  color: #000; }
+
+h1 {
+  font-size: 47px; }
+
+h2 {
+  font-size: 29px; }
+
+h3 {
+  font-size: 18px; }
+
+section {
+  margin-bottom: 29px; }
+
+.marginalie {
+  font-family: PTserif;
+  padding-left: 18px;
+  color: #f09e05;
+  border-left: solid 2px #f09e05; }
+  .marginalie--image {
+    border: none; }
+  @media only screen and (min-width: 50rem) {
+    .marginalie {
+      padding-right: 18px;
+      width: 26rem;
+      float: left;
+      margin-left: -26rem;
+      margin-bottom: 0;
+      text-align: right;
+      border-left: none; } }
+
+.main-header {
+  background-image: url(../images/NGC_2818_by_the_Hubble_Space_Telescope.jpg);
+  padding: 18px;
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .main-header__headline {
+    color: #fff;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.9); }
+
+.main-content {
+  padding: 18px;
+  max-width: 50rem;
+  background-color: #fff;
+  color: #666;
+  transition: margin 0.8s; }
+  @media only screen and (min-width: 50rem) {
+    .main-content {
+      margin-left: 26rem; } }
+
+/*# sourceMappingURL=main.css.map */

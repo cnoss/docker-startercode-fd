@@ -1,0 +1,24 @@
+FROM node:12-slim
+ENV TZ=Europe/Berlin
+
+# Install http Server
+RUN npm install --global http-server
+
+# Install Live Reload
+RUN npm install --global livereload
+
+# Create app directory
+WORKDIR /srv
+
+# Install app dependencies
+# A wildcard is used to ensure both package.json AND package-lock.json are copied
+# where available (npm@5+)
+COPY package*.json ./
+CMD [ "npm", "install"]
+
+# If you are building your code for production
+# RUN npm ci --only=production
+
+EXPOSE 8080 35729
+CMD [ "http-server", "/srv/htdocs", "-c-1"]
+
