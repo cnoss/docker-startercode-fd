@@ -1,61 +1,48 @@
-
 *{
   box-sizing: border-box;
 }
 
 html, body{
   font-family: $font-family-sans;
-  font-size: $m;
+  font-size: $base-font-size;
   line-height: $lh-default;
-  font-weight: $fw-normal;
+  font-weight: $fw-light; 
   hyphens: auto;
-  color: $text-color;
+  color:$text-color;
+  background-color: $light;
 }
 
-img{
-  width: 100%;
-  height: auto;
-}
 
-h1, h2, h3, h4, p, blockquote{
-  margin-bottom: $l;
-}
-
-blockquote{
-  font-family: $font-family-serif;
-  color: $darkest;
-}
-
-blockquote:before{
-  content: "«";
-  padding-right: 0.1em;
-}
-
-blockquote:after{
-  content: "»";
-  padding-left: 0.1em;
-}
+/* Headlines
+############################################################################ */
 
 h1, h2, h3, h4{
   line-height: $lh-tight;
   font-weight: $fw-bold;
   color: $headline-color;
+  hyphens: none;
 }
 
+h1, h2, h3, h4, p, blockquote, ol{
+  margin-bottom: $m;
+}
 
 h1{
-  font-size: $xl;
+  font-size: 2rem;
 }
 
 h2{
-  font-size: $l;
+  font-size: 1.4rem;
 }
 
 h3{
-  font-size: $m;
+  font-size: 1.2rem;
 }
 
 
-section{
-  margin-bottom: $l;
+/* Images
+############################################################################ */
+
+img{
+  width: 100%;
 }

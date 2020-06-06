@@ -1,17 +1,21 @@
+
 /* Sizes
-Using Lucas Numbers 1, 3, 4, 7, 11, 18, 29, 47, 76, 
+Using Renard R'10, 1.00, 1.25, 1.60, 2.00,  2.50, 3.15, 4.00
 ---------------------------------------------------------------------------- */
-$xs: 7px;
-$s: 11px;
-$m: 18px;
-$l: 29px;
-$xl: 47px;
+$basesize: 10px;
+$xxs: 1 * $basesize;
+$xs: 1.25 * $basesize;
+$s: 1.60 * $basesize;
+$m: 2 * $basesize;
+$l: 2.5 * $basesize;
+$xl: 3.15 * $basesize;
+$xxl: 4 * $basesize;
 
 
 /* Font Properties
 ---------------------------------------------------------------------------- */
-$font-family-serif: PTserif;
-$font-family-sans: PTsans;
+$font-family-serif: Beanie;
+$font-family-sans: Lato;
 $base-font-size: $m;
 $font-icons: 'Material Icons';
 
@@ -25,48 +29,73 @@ $fw-bold: 600;
 
 /* Line Heights
 ---------------------------------------------------------------------------- */
-$lh-tight: 100%;
+$lh-tight: 110%;
 $lh-default: 130%;
 $lh-loose: 150%;
 
-/* Colors
+
+/* Base Colors
 ---------------------------------------------------------------------------- */
 $dark: #666;
 $darker: #333;
 $darkest: #000;
-$darken: rgba(0,0,0,0.3);
+$darken-light: rgba(0, 0, 0, 0.6);
+$darken-medium: rgba(0, 0, 0, 0.8);
+$darken-strong: rgba(0, 0, 0, 0.9);
+$darken: rgba(0,0,0,0.05);
 
 $light: #ddd;
 $lighter: #eee;
 $lightest: #fff;
-$lighten: rgba(255,255,255,0.3);
+$lighten: rgba(255,255,255,0.1);
+$lighten-strong: rgba(255,255,255,0.6);
 
-$red: hsla(354, 85, 64, 1);
-$dark-blue: hsla(208, 80, 41, 1);
-$blue: hsla(208, 57, 64, 1);
-$orange-light: hsla(45, 96, 48, 1);
-$orange: hsla(39, 96, 48, 1);
+$white: #FFF;
+$red: #F2636A;
+$cyan: #4BD4F2;
+$cyan-dark: #238EA6;
+$orange-light: #F2E133;
+$orange: #A69B2B;
 
 
-/* Functional Properties
+/* Functional Colors
 ---------------------------------------------------------------------------- */
-$text-color: $dark;
-$headline-color: $darkest;
 $interaction-color: $red;
-$decoration-color: $orange;
-
-
-/* Viewports
----------------------------------------------------------------------------- */
-$vp-small: 50rem;
+$interaction-color-hover: $cyan-dark;
+$decoration-color: $cyan;
+$text-color: $darker;
+$headline-color: $darker;
+$headline-color-light: $light;
+$aside-color: $orange;
+$border-color: $light;
+$footer-background-color: $cyan-dark;
+$footer-color: $lighten-strong;
+$menu-link-color: $white;
+$menu-link-color-hover: $cyan;
 
 
 /* Transitions
 ---------------------------------------------------------------------------- */
 $tr-fast: 0.2s;
-$tr-slow: 0.8s;
+$tr-medium: 0.6s;
+$tr-slow: 1s;
+
+
+/* Viewports
+---------------------------------------------------------------------------- */
+$vp-small: 30 * $m;
+$vp-medium: 60 * $m;
+$vp-large: 80 * $m;
+
+
+
 
 /* Misc
 ---------------------------------------------------------------------------- */
-$border-width: 2px;
-$width-marinalie: 26rem;
+$bw: 2px;
+$text-shadow: 0 0 20px rgba(0,0,0,0.9);
+$max-width-content: 50rem;
+$aside-width: 20rem;
+$border-width: 1px;
+$border-radius: 4px;
+$shadow-l: 0 0 10px rgba(0,0,0,0.4);

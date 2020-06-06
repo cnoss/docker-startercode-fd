@@ -1,50 +1,486 @@
-.marginalie {
-  font-family: $font-family-serif;
+/* Copytext
+############################################################################ */
 
-  padding-left: $m;
+.copytext{
+  @media only screen and (min-width: $vp-large) {
+    max-width: 80%;
+  }
+}
 
-  color: $decoration-color;
-  border-left: solid $border-width $decoration-color;
 
-  &--image{
+/* Page Footer
+############################################################################ */
+.page-footer {
+  padding: $m $m $xxl $m;
+
+  color: $footer-color;
+  background-color: $footer-background-color;
+
+  $self: &;
+
+  &__text {
+    font-size: $s;
+    line-height: $lh-default;
+
+    & a {
+      font-weight: $fw-normal;
+
+      text-decoration: none;
+
+      color: $footer-color;
+    }
+
+    & + .linklist {
+      margin-top: -$m;
+    }
+  }
+
+  &__headline {
+    font-size: $s;
+    font-weight: $fw-bold;
+
+    color: $footer-color;
+  }
+
+  @media only screen and (min-width: $vp-large) {
+    width: $vp-large;
+    margin: 0 auto;
+    box-shadow: $shadow-l;
+  }
+}
+
+
+/* Linklist
+############################################################################ */
+.linklist {
+  &__item {
+    font-family: 'Material Icons';
+    line-height: $lh-default;
+
+    margin-left: $m;
+
+    &:before {
+      font-size: $xs;
+
+      display: inline-block;
+      margin-left: -$m;
+      padding-right: $xxs;
+
+      content: 'link';
+    }
+
+    & > a {
+      font-family: $font-family-sans;
+    }
+  }
+}
+
+
+/* Overview
+############################################################################ */
+.card-overview {
+  &__item {
+    & + & {
+      margin-top: $xl;
+    }
+  }
+}
+
+
+/* Teaser
+############################################################################ */
+
+.teaser {
+  &__image {
+    display: block;
+    width: 100%;
+    margin-bottom: $xs;
+  }
+
+  &__headline {
+    font-size: $s;
+    margin-bottom: $xs;
+  }
+
+  &__text {
+    font-size: $s;
+    line-height: $lh-default;
+  }
+
+  &__cta {
+    font-size: $s;
+    font-weight: $fw-normal;
+
+    display: inline-block;
+
+    transition: background $tr-medium;
+    text-decoration: none;
+
+    color: #fff;
+    border: solid $border-width $border-color;
+    background-color: $interaction-color;
+
+    @include button;
+    &:hover {
+      background-color: $interaction-color-hover;
+    }
+  }
+}
+
+
+/* Subtitle
+############################################################################ */
+
+.subtitle {
+  margin-top: -1em;
+}
+
+
+/* Main Header
+############################################################################ */
+
+.main-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 50vh;
+  padding: $l;
+  transition: min-height $tr-medium;
+
+  background-image: url(../images/hero-l.png);
+  background-position: center center;
+  background-size: cover;
+
+  &__menu-bar {
+    background-color: $darken-medium;
+    left: 0;
+    padding: $xs $l;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+  }
+
+  &__menu-bar-nav {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity $tr-medium;
+  }
+
+  &__menu-bar-nav--is-open {
+    height: auto;
+    opacity: 1;
+  }
+
+  &__group{
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (min-width: $vp-large) {
+      width: $vp-large;
+      margin: 0 auto;
+      padding: $m;
+    }
+  }
+
+  &__title,
+  &__subtitle {
+    display: inline-block;
+    align-self: flex-start;
+    margin: 0;
+    padding: $xxs $xs;
+
+    box-shadow: $shadow-l;
+  }
+
+  &__title {
+    background-color: $lightest;
+  }
+
+  &__subtitle {
+    color: $lightest;
+    background-color: $decoration-color;;
+  }
+
+  @media only screen and (min-width: $vp-large) {
+    min-height: 80vh;
+  }
+
+}
+
+/* Hamburger Menu
+############################################################################ */
+
+.hamburger-button {
+  margin-left: -4px;
+  
+}
+
+.hamburger-button {
+
+  &:active {
     border: none;
   }
 
-  @media only screen and (min-width: $vp-small) {
-    padding-right: $m;
-    width: $width-marinalie;
-    float: left;
-    margin-left: -$width-marinalie; 
-    margin-bottom: 0;
-    text-align: right;
-    border-left: none;
+  cursor:pointer;
+  background:0 0;
+  border:0;
+  transition:transform .2s ease-in-out;
+  width: 30px;
+
+  &__bar-top,
+  &__bar-bottom {
+    transition:transform .6s,opacity .6s;
+    transform-origin:50% 50%  
+  }
+
+  &--is-open &__bar-top {
+    transform:rotate(45deg)translateY(30%)
+  }
+
+  &--is-open &__bar-middle {
+    opacity:0
+  }
+
+  &--is-open &__bar-bottom {
+    transform:rotate(-45deg)translateY(-30%)
   }
 }
 
-.main-header{
-  background-image: url(../images/NGC_2818_by_the_Hubble_Space_Telescope.jpg);
-  padding: $m;
-  height: 100vh;
-  background-size: cover;
-  background-position: center center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Menu List
+############################################################################ */
 
-  &__headline{
-    color: $lightest;
-    text-shadow: 0 0 20px rgba(0,0,0,0.9);
+.menu-list {
+  color: $light;
+  font-size: $m;
+  overflow: hidden;
+  padding-top: $xxs;
+  padding-bottom: $xxs;
+
+  &__link {
+    color: $menu-link-color;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  &__link:hover {
+    color: $menu-link-color-hover;
   }
 }
 
-.main-content{
-  padding: $m;
-  max-width: $vp-small;
+
+/* Main & Aside Content 
+############################################################################ */
+
+.main-content,
+.aside-content {
+
   background-color: $lightest;
-  color: $dark;
-  transition: margin $tr-slow;
+  padding: $l $l $xl $l;
 
-  @media only screen and (min-width: $vp-small) {
-    margin-left: $width-marinalie;
+  &__section {
+    margin-bottom: $xxl;
+
+    & + & {
+      padding-top: $xl;
+
+      border-top: solid $border-width $decoration-color;
+    }
+  }
+}
+
+.aside-content {
+  background-color: $darken;
+
+  &__headline {
+    font-size: $m;
+  }
+}
+
+@media only screen and (min-width: $vp-medium) {
+  .content-wrap {
+    display: grid;
+
+    grid-template-columns: 1fr 20 * $m;
+  }
+}
+
+@media only screen and (min-width: $vp-large) {
+  .content-wrap {
+    width: $vp-large;
+    margin: 0 auto;
+    grid-template-columns: 60 * $m 20 * $m;
+    box-shadow: $shadow-l;
+  }
+}
+
+/* Table
+############################################################################ */
+
+.table {
+  &__cell,
+  &__head {
+    width: 40%;
+    padding: $xxs;
+
+    text-align: left;
+  }
+
+  &__head {
+    font-weight: $fw-normal;
+  }
+
+  &__cell {
+    padding: $xxs;
+
+    border-top: solid $border-width $border-color;
+  }
+
+  tr:nth-child(even) > td {
+    background-color: $lighter;
+  }
+
+  &__cell--less-important,
+  &__head--less-important {
+    display: none;
+  }
+
+  @media only screen and (min-width: 40 * $m) {
+    .table__cell--less-important,
+    .table__head--less-important {
+      display: table-cell;
+      width: 30%;
+    }
+  }
+
+  &__cell--is-number,
+  &__head--is-number {
+    width: 10%;
+
+    text-align: right;
+  }
+}
+
+/* Ranking
+############################################################################ */
+
+.ranking {
+  margin-left: $m;
+
+  list-style-type: decimal;
+}
+
+
+/* Liste Item
+############################################################################ */
+
+.list-item {
+  & + & {
+    margin-top: $xxs;
+  }
+
+  &__number {
+    color: $decoration-color;
+    &:before {
+      content: '#';
+
+      color: $dark;
+    }
+  }
+}
+
+/* Slideshow
+############################################################################ */
+
+.slide-show {		
+	position: relative;
+
+	&__slide {
+		left: 0;
+		opacity: 0;
+		position: absolute;
+		top: 0;
+    transition: opacity 1s;
+		z-index: 1;
+  }
+
+  &__slide:first-child {
+    position: relative;
+  }
+
+  &__slide--visible {
+    opacity: 1;
+    z-index: 2;
+  }
+
+  &__nav-next,
+  &__nav-previous {
+    background-color: $darken-light;
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color $tr-medium;
+    z-index: 3;
+    
+    &:hover {
+      background-color: $darken-strong;
+    }
+
+    &::before {
+      color: $white;
+      display: inline-block;
+      font-family: $font-icons;
+      font-size: $l;
+      line-height: $lh-default;
+      @media only screen and (min-width: $vp-small) { 
+        font-size: $xxl;
+      }
+      @media only screen and (min-width: $vp-medium) { 
+        font-size: $l;
+      }
+    }
+  }
+
+  &__nav-next {
+    right: 0;
+    &:before {
+      content: 'navigate_next';
+    }
+  }
+
+  &__nav-previous {
+    left: 0;
+    &:before {
+      content: 'navigate_before';
+    }
+  }
+}
+
+/* Dot Navigation
+############################################################################ */
+
+.dot-navigation {
+  margin: 0 0 0 0;
+  padding: 0 0 $s 0;
+  line-height: 1;
+  list-style: none;
+  text-align: center;
+  width: 100%;
+
+  &__dot {
+    border: $border-width $darker solid;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    height: $xxs;
+    margin: 0 $xxs;
+    width: $xxs;
+  }
+
+  &__dot--active {
+    background-color: $darker;
   }
 }
