@@ -1,31 +1,29 @@
-# ERCO XML zu mySQL Import
+# Frontend Dev Docker Umgebung
+Kleine Umgebung zum Üben und Austesten. Hier ist noch keine Distribution BuildChain enthalten. Aber zum Entwickeln reicht es ;)
 
 
 ## Vorraussetzungen
-  - Docker
-  - Abzug der mam Daten (siehe unten)
-  
-## Installation (Prod)
-  1. Config Datei erstellen `cp config.sample.cfg Dockerconfig.cfg`
-  2. `mamDataRoot` in der `Dockerconfig.cfg` anpassen sodass der Pfad auf den lokalen XML Ordner zeigt
-  3. `make build` ausführen (`make build-dev` zum Bauen des Dev-images)
-  4. `make run` ausführen (`make run-dev` zum mounten des Dev-images)
+- Docker ist installiert
+- Powershell (Windows)
 
-## Benutzung (Prod)
-  - `make` stoppt den laufenden container (falls er existiert) und startet eine neue Instanz
-  - `make build` buildet das Image
-  - `make run` startet den Container
-  - `make stop` stoppt den Container
-  - `make rebuild` stoppt den Container (falls er existiert), baut das Image neu und startet den Container erneut
-  - `make enter` wählt einen in den Container ein
-  - `make import` startet den Import
+## Features
+- Docker Container
+- Makefile zum Bauen, Starten, Stoppen des Containers
+- Developmemt im laufenden Container
+- npm script BuildChain mit SASS, Livereload und ESlint
+
+## Getting Started
+1. Repo forken und/oder klonen
+2. Ins Verzeichnis wechseln und `make build-dev` ausführen.
+3. `make run-dev` ausführen
 
 ## Benutzung (Dev)
 Im Dev-mode wird das Programm per Mount in den Server geladen - es kann also auf dem Hostsystem daran gearbeitet werden. Ein Neubauen bei Codeänderungen ist nicht notwendig.
+- `make build-dev` buildet das Dev Image
+- `make run-dev` startet den Dev Container und ruft *enter-dev* auf
+- `make stop-dev` stoppt den Dev Container
+- `make rebuild-dev` stoppt den Dev Container (falls er existiert), baut das Dev Image neu und startet den Container erneut
+- `make enter-dev` wählt einen in den Dev Container ein
 
-  - `make build-dev` buildet das Dev Image
-  - `make run-dev` startet den Dev Container
-  - `make stop-dev` stoppt den Dev Container
-  - `make rebuild-dev` stoppt den Dev Container (falls er existiert), baut das Dev Image neu und startet den Container erneut
-  - `make enter-dev` wählt einen in den Dev Container ein
-  - `make import-dev` startet den Import im Dev Container
+## Buildchain starten
+Im Dev Container `npm run watch` ausführen. Falls hier etwas nicht klappt, im Container noch mal `npm install` ausführen. Danach dann noch mal `npm run watch` ausführen.
