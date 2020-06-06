@@ -61,9 +61,6 @@ typings/
 dist/configs
 Dockerconfig.cfg
 
-# XML Data
-lightscout_xml
-
 # Misc Ignores
 .DS_Store
 .vscode
