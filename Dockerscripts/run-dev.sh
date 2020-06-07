@@ -11,6 +11,8 @@ docker run --rm -t -d \
 --name ${name}-dev \
 ${name}-dev
 
+docker exec -it ${name}-dev npm install
+
 docker exec -ti ${name}-dev rm htdocs && ln -sf src/ htdocs
 
 echo ""

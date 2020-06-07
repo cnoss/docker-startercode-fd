@@ -16,3 +16,5 @@ echo "// ----------------------------------------------------------------------"
 echo "// Building Development Container"
 docker build -t ${name}-dev -f Dockerfile.dev .
 echo "// Development build done. yeah!"
+
+

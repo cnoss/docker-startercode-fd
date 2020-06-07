@@ -10,12 +10,13 @@ Kleine Umgebung zum Üben und Austesten. Hier ist noch keine Distribution BuildC
 - Docker Container
 - Makefile zum Bauen, Starten, Stoppen des Containers
 - Developmemt im laufenden Container
-- npm script BuildChain mit SASS, Livereload und ESlint
+- npm script BuildChain mit SASS, [Livereload](http://livereload.com/extensions/) und ESlint
 
 ## Getting Started
 1. Repo forken und/oder klonen
 2. Ins Verzeichnis wechseln und `make build-dev` ausführen.
 3. `make run-dev` ausführen
+4. Die Website müsste jetzt unter [http://127.0.0.1:8888](http://127.0.0.1:8888) erreichbar sein.
 
 ## Benutzung (Dev)
 Im Dev-mode wird das Programm per Mount in den Server geladen - es kann also auf dem Hostsystem daran gearbeitet werden. Ein Neubauen bei Codeänderungen ist nicht notwendig.
