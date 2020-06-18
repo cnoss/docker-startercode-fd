@@ -10,11 +10,7 @@ Kleine Umgebung zum Üben und Austesten. Hier ist noch keine Distribution BuildC
 - Docker Container
 - NPM Script zum Bauen, Starten, Stoppen des Containers
 - Developmemt im laufenden Container
-<<<<<<< HEAD
-- NPM Script BuildChain mit SASS, Livereload und ESlint
-=======
-- npm script BuildChain mit SASS, [Livereload](http://livereload.com/extensions/) und ESlint
->>>>>>> 9d904474e5ae51808bbe10b4b07ab47d209c474f
+- NPM Script BuildChain mit SASS, [Livereload](http://livereload.com/extensions/) und ESlint
 
 ## Getting Started
 1. Repo forken und/oder klonen
