@@ -14,8 +14,9 @@ Kleine Umgebung zum Üben und Austesten. Hier ist noch keine Distribution BuildC
 
 ## Getting Started
 1. Repo forken und/oder klonen
-2. Ins Verzeichnis wechseln und `npm run docker:build-dev` ausführen.
-3. `npm run docker:run-dev` ausführen
+2. Ins Verzeichnis wechseln und `npm install` ausführen
+3. `npm run docker:build-dev` ausführen um den Container zu bauen
+3. `npm run docker:run-dev` ausführen um den Container zu starten
 4. Die Website müsste jetzt unter [http://127.0.0.1:8888](http://127.0.0.1:8888) erreichbar sein.
 5. `npm run docker:enter-dev` wählt einen in den Dev Container ein, bzw. liefert die Codezeile, mit der das geht. 
 
