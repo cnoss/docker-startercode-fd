@@ -6,7 +6,9 @@ const dockerExec = `docker exec -it ${imageName} env TERM=xterm-256color /bin/ba
 
 console.log('');
 console.log('// ----------------------------------------------------------------------');
-console.log(`// Type <${dockerExec}> to enter Docker container.`);
+console.log('// Execute the following command to enter Docker container:');
+console.log(`\t${dockerExec}`);
+console.log('');
 console.log('// Type <exit> to exit.');
 console.log('// Type <npm run watch> to start watchmode.');
 console.log('// Type <npm run> for all available commands.');

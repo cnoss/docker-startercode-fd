@@ -22,5 +22,5 @@ CMD [ "npm", "install"]
 EXPOSE 8080 35729
 
 # Run http Server
-CMD [ "http-server", "/srv/htdocs", "-c-1"]
+CMD [ "http-server", "/srv/src", "-c-1"]
 

@@ -6,7 +6,7 @@ const pwd = process.cwd();
 
 const imageName = `${config.name}-dev`;
 const dockerRun = `docker run --rm -t -d -p ${config.port}:8080 -p 35729:35729 -v ${pwd}:/srv --name ${imageName} ${imageName}`;
-const dockerExec = `docker exec ${imageName} rm htdocs && ln -sf src/ htdocs`;
+// const dockerExec = `docker exec ${imageName} rm htdocs && ln -sf src/ htdocs`;
 
 
 console.log('');
@@ -18,10 +18,10 @@ if (shell.exec(dockerRun).code !== 0) {
   shell.exit(1);
 }
 
-if (shell.exec(dockerExec).code !== 0) {
+/* if (shell.exec(dockerExec).code !== 0) {
   shell.echo(`Error with command: ${dockerExec}`);
   shell.exit(1);
-}
+} */
 
 console.log('');
 console.log('// ----------------------------------------------------------------------');
