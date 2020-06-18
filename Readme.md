@@ -10,17 +10,15 @@ Kleine Umgebung zum Üben und Austesten. Hier ist noch keine Distribution BuildC
 - Docker Container
 - NPM Script zum Bauen, Starten, Stoppen des Containers
 - Developmemt im laufenden Container
-<<<<<<< HEAD
-- NPM Script BuildChain mit SASS, Livereload und ESlint
-=======
-- npm script BuildChain mit SASS, [Livereload](http://livereload.com/extensions/) und ESlint
->>>>>>> 9d904474e5ae51808bbe10b4b07ab47d209c474f
+- NPM Script BuildChain mit SASS, [Livereload](http://livereload.com/extensions/) und ESlint
 
 ## Getting Started
 1. Repo forken und/oder klonen
-2. Ins Verzeichnis wechseln und `npm run docker:build-dev` ausführen.
-3. `make run-dev` ausführen
+2. Ins Verzeichnis wechseln und `npm install` ausführen
+3. `npm run docker:build-dev` ausführen um den Container zu bauen
+3. `npm run docker:run-dev` ausführen um den Container zu starten
 4. Die Website müsste jetzt unter [http://127.0.0.1:8888](http://127.0.0.1:8888) erreichbar sein.
+5. `npm run docker:enter-dev` wählt einen in den Dev Container ein, bzw. liefert die Codezeile, mit der das geht. 
 
 ## Benutzung (Dev)
 Im Dev-mode wird das Programm per Mount in den Server geladen - es kann also auf dem Hostsystem daran gearbeitet werden. Ein Neubauen bei Codeänderungen ist nicht notwendig.
